@@ -44,6 +44,31 @@ public class Texto {
         }
     }
 
+    public int numeroVocales(){
+        int contador=0;
+
+        for (int i = 0; i<cadena.length() ; i++){
+            if (esVocal(cadena.charAt(i))){
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+
+
+    public boolean esVocal(char caracter){
+        boolean vocal=false;
+        caracter=Character.toLowerCase(caracter);
+
+        if(VOCALES.indexOf(caracter) != -1){
+            vocal=true;
+        }
+        return vocal;
+    }
+
+
+
 
     public String getCadena() {
         return cadena;
@@ -61,3 +86,4 @@ public class Texto {
         this.caracter = caracter;
     }
 }
+
